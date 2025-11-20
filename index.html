@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50 flex items-center p-6">
+    <div class="w-full max-w-3xl">
+      <!-- Estilo propio-->
+      <div class="bg-white rounded-xl shadow-md p-6 flex items-center gap-6">
+        <div>
+          <img
+            class="w-28 h-28 object-contain rounded-lg"
+            src="https://play-lh.googleusercontent.com/XRckCDA5xVX09zijUYIuUGzTGi33zoWW4q1sEam0hwg9m_B8VtFFxT0IRMJq9qZ3IYevgvYC-vQyQhQe2cn7TQ=w240-h480-rw"
+            alt="logo ZGallery"/>
+        </div>
+        <div class="flex-1">
+          <h1 class="text-3xl font-semibold">ZGallery</h1>
+          <div class="mt-4">
+            <button
+              onclick="showSimulator()"
+              class="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-md shadow">Abrir App</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Clon de ZGallery-->
+    <div id="main" onclick="simulator(event)" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 items-center justify-center p-5">
+      <!--Head-->
+        <div class="relative">
+        <!--svg https://tabler.io/icons -->
+        <div class="w-full max-w-md h-[90vh] max-h-[850px] bg-black rounded-[40px] p-2 shadow-2xl">
+          <div class="w-full h-full bg-gray-100 rounded-[32px] overflow-hidden relative flex flex-col">
+            <div id="searchBar" class="bg-indigo-100 mx-4 mt-3 mb-2 px-4 py-3 rounded-3xl flex items-center gap-3">
+              <span class="text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                  <path d="M21 21l-6 -6" /></svg></span>
+              <input type="text" placeholder="Search " class="bg-transparent flex-1 outline-none text-gray-600 placeholder-gray-400"/>
+              <button class="text-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-camera-plus">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 20h-7a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v3.5"/>
+                  <path d="M16 19h6" />
+                  <path d="M19 16v6" />
+                  <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                </svg>
+              </button>
+              <button id="ViewBtn" class="text-lg" type="button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-photo">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M8.813 11.612c.457 -.38 .918 -.38 1.386 .011l.108 .098l4.986 4.986l.094 .083a1 1 0 0 0 1.403 -1.403l-.083 -.094l-1.292 -1.293l.292 -.293l.106 -.095c.457 -.38 .918 -.38 1.386 .011l.108 .098l4.674 4.675a4 4 0 0 1 -3.775 3.599l-.206 .005h-12a4 4 0 0 1 -3.98 -3.603l6.687 -6.69l.106 -.095zm9.187 -9.612a4 4 0 0 1 3.995 3.8l.005 .2v9.585l-3.293 -3.292l-.15 -.137c-1.256 -1.095 -2.85 -1.097 -4.096 -.017l-.154 .14l-.307 .306l-2.293 -2.292l-.15 -.137c-1.256 -1.095 -2.85 -1.097 -4.096 -.017l-.154 .14l-5.307 5.306v-9.585a4 4 0 0 1 3.8 -3.995l.2 -.005h12zm-2.99 5l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z"/>
+                </svg>
+              </button>
+              <button class="text-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-horizontal">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M4 6l8 0" />
+                  <path d="M16 6l4 0" />
+                  <path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M4 12l2 0" />
+                  <path d="M10 12l10 0" />
+                  <path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M4 18l11 0" />
+                  <path d="M19 18l1 0" /> 
+                </svg>
+              </button>
+            </div>
+            
+    <!--Photos main-->
+  <div class="relative flex-1 flex flex-col min-h-0">
+    <div id="viewControls" class="px-4 mb-2"></div>
+    <div id="gallery" class="flex-1 min-h-0 overflow-y-scroll"></div>
+
+    <!--Button footer (vista cuadricula) -->
+    <div id="btnFooter" class="absolute left-0 right-0 bottom-4 flex justify-center p-3 hidden pointer-events-none">
+      <div class="pointer-events-auto opacity-70">
+        <button class="bg-blue-400 text-white px-4 py-2 rounded-[30px] shadow-lg">View hidden photo</button>
+      </div>
+    </div>
+
+    <!-- imagen completa  -->
+    <div id="preview" class="hidden absolute inset-0 bg-black z-50 flex flex-col">
+      <!-- Header superior con nombre -->
+      <div class="flex items-center justify-between px-4 py-3 bg-black/50">
+        <button id="closePreview" class="text-white text-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12l14 0"/>
+            <path d="M5 12l6 6"/>
+            <path d="M5 12l6 -6"/>
+          </svg>
+        </button>
+        <span id="previewTitle" class="text-white text-base font-normal flex-1 ml-4">img</span>
+        <button class="text-white text-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+            <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+            <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="flex-1 flex items-center justify-center p-4">
+        <img id="previewImg" class="max-w-full max-h-full object-contain" />
+      </div>
+      
+      <!-- Botones inferiores  -->
+      <div class="absolute bottom-0 left-0 right-0 flex justify-around items-center py-6 px-4 bg-gradient-to-t from-black/90 to-transparent">
+        <button class="text-white text-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/>
+          </svg>
+        </button>
+        <button class="text-white text-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/>
+            <path d="M13.5 6.5l4 4"/>
+          </svg>
+        </button>
+        <button class="text-white text-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"/>
+            <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"/>
+          </svg>
+        </button>
+        <button class="text-white text-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18"/>
+            <path d="M19 6v14c0 1 -1 2 -2 2h-10c-1 0 -2 -1 -2 -2v-14"/>
+            <path d="M8 6v-2c0 -1 1 -2 2 -2h4c1 0 2 1 2 2v2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
